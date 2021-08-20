@@ -30,4 +30,8 @@ Route::group(['prefix' => 'admin'], function () {
         // Matches The "/admin/users" URL        
         return view('users');
     });
+    Route::get('welcome', function ()    {
+        // Matches The "/admin/users" URL        
+        return view('welcome');
+    });
 });
