@@ -35,3 +35,8 @@ Route::group(['prefix' => 'admin'], function () {
         return view('welcome ');
     });
 });
+
+# Using Request
+Route::get('username/{name}', function (Request $request) {
+    return $request->route('name');
+});
