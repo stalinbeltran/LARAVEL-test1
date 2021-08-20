@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudInsertController;
 use App\Http\Controllers\StudViewController;
 use App\Http\Controllers\StudUpdateController;
+use App\Http\Controllers\StudDeleteController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -58,3 +60,6 @@ Route::get("/page", function(){
  Route::post('edit/{id}', [StudUpdateController::class, 'edit']);
 
  
+ Route::get('delete-records', [StudDeleteController::class, 'index']);
+ Route::get('delete/{id}', [StudDeleteController::class, 'destroy']);
+
