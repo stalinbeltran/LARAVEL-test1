@@ -40,3 +40,4 @@ Route::group(['prefix' => 'admin'], function () {
 Route::get('username/{name}', function (Request $request) {
     return view('welcome ');
 });
+Route::redirect('/', '/admin/users', 301);
