@@ -49,5 +49,3 @@ Route::get("/page", function(){
 
  Route::get('insert', [StudInsertController::class, 'insertform']);
  Route::post('create', [StudInsertController::class, 'insert']);
-//Route::get('insert','StudInsertController@insertform');
-//Route::post('create','StudInsertController@insert');
