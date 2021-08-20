@@ -38,5 +38,5 @@ Route::group(['prefix' => 'admin'], function () {
 
 # Using Request
 Route::get('username/{name}', function (Request $request) {
-    return $request->route('name');
+    return view('welcome ');
 });
