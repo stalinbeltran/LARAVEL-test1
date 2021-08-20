@@ -13,8 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::pattern('id', '\d+');
 Route::get('/', function () {
     return view('welcome1');
+});
+
+Route::get('/{id}', function () {
+    return view('welcome');
 });
 Route::get('/login', function () {
     return view('login');
