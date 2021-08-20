@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudInsertController;
 use App\Http\Controllers\StudViewController;
+use App\Http\Controllers\StudUpdateController;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,4 +52,9 @@ Route::get("/page", function(){
  Route::get('insert', [StudInsertController::class, 'insertform']);
  Route::post('create', [StudInsertController::class, 'insert']);
  Route::get('view-records', [StudViewController::class, 'index']);
- //Route::get('view-records','StudViewController@index');
+
+ Route::get('edit-records', [StudUpdateController::class, 'index']);
+ Route::get('edit/{id}', [StudUpdateController::class, 'show']);
+ Route::post('edit/{id}', [StudUpdateController::class, 'edit']);
+
+ 
