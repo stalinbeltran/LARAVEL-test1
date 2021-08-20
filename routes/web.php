@@ -32,6 +32,6 @@ Route::group(['prefix' => 'admin'], function () {
     });
     Route::get('welcome', function ()    {
         // Matches The "/admin/users" URL        
-        return view('welcome');
+        return view('welcome ');
     });
 });
