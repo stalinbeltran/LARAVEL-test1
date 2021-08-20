@@ -24,3 +24,10 @@ Route::get('/{id}', function () {
 Route::get('/login', function () {
     return view('login');
 })->name('login');
+
+Route::group(['prefix' => 'admin'], function () {
+    Route::get('users', function ()    {
+        // Matches The "/admin/users" URL        
+        return view('users');
+    });
+});
