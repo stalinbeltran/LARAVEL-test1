@@ -49,3 +49,5 @@ Route::get("/page", function(){
 
  Route::get('insert', [StudInsertController::class, 'insertform']);
  Route::post('create', [StudInsertController::class, 'insert']);
+ Route::get('view-records', [StudViewController::class, 'index']);
+ //Route::get('view-records','StudViewController@index');
