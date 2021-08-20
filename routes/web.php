@@ -45,4 +45,5 @@ Route::view('/welcomeSpecial', 'welcome', ['name' => 'Taylor']);
 Route::get("/page", function(){
     return View::make("dir.page");
  });
- 
+Route::get('insert','StudInsertController@insertform');
+Route::post('create','StudInsertController@insert');
