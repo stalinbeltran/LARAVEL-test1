@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\StudInsertController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,5 +46,6 @@ Route::view('/welcomeSpecial', 'welcome', ['name' => 'Taylor']);
 Route::get("/page", function(){
     return View::make("dir.page");
  });
-Route::get('insert','StudInsertController@insertform');
-Route::post('create','StudInsertController@insert');
+Route::resource('insert', StudInsertController::class);
+//Route::get('insert','StudInsertController@insertform');
+//Route::post('create','StudInsertController@insert');
