@@ -63,3 +63,7 @@ Route::get("/page", function(){
  Route::get('delete-records', [StudDeleteController::class, 'index']);
  Route::get('delete/{id}', [StudDeleteController::class, 'destroy']);
 
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
