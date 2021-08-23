@@ -33,7 +33,7 @@ Route::get('/login', function () {
 Route::group(['prefix' => 'admin'], function () {
     Route::get('users', function ()    {
         // Matches The "/admin/users" URL        
-        return view('users');
+        return view('users', ["name"=> "Stalin"]);
     });
     Route::get('welcome', function ()    {
         // Matches The "/admin/users" URL        
