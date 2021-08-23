@@ -27,10 +27,11 @@ Route::get('/', function () {
 Route::get('/{id}', function () {
     return view('welcome');
 });
+/*
 Route::get('/login', function () {
     return view('login');
 })->name('login');
-
+*/
 /*Route::group(['prefix' => 'admin'], function () {
     Route::get('users', function ()    {
         // Matches The "/admin/users" URL        
@@ -67,4 +68,4 @@ Route::get("/page", function(){
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Auth::routes();
+//Auth::routes();
