@@ -19,9 +19,10 @@ use App\Http\Controllers\StudDeleteController;
 */
 
 Route::pattern('id', '\d+');
+/*
 Route::get('/', function () {
     return view('welcome1');
-});
+});*/
 
 Route::get('/{id}', function () {
     return view('welcome');
@@ -30,7 +31,7 @@ Route::get('/login', function () {
     return view('login');
 })->name('login');
 
-Route::group(['prefix' => 'admin'], function () {
+/*Route::group(['prefix' => 'admin'], function () {
     Route::get('users', function ()    {
         // Matches The "/admin/users" URL        
         return view('users', ["name"=> "Stalin"]);
@@ -39,13 +40,13 @@ Route::group(['prefix' => 'admin'], function () {
         // Matches The "/admin/users" URL        
         return view('welcome ');
     });
-});
+});*/
 
 # Using Request
 Route::get('username/{name}', function (Request $request) {
     return view('welcome ');
 });
-Route::redirect('/', '/admin/users', 301);
+//Route::redirect('/admin/users', '/', 301);
 Route::view('/welcomeSpecial', 'welcome', ['name' => 'Taylor']);
 Route::get("/page", function(){
     return View::make("dir.page");
