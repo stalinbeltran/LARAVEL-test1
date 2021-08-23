@@ -46,7 +46,7 @@ Route::get('/login', function () {
 Route::get('username/{name}', function (Request $request) {
     return view('welcome ');
 });
-//Route::redirect('/admin/users', '/', 301);
+//Route::redirect('/admin/users', '/', 301);    //redirect permanente
 Route::view('/welcomeSpecial', 'welcome', ['name' => 'Taylor']);
 Route::get("/page", function(){
     return View::make("dir.page");
